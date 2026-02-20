@@ -8,7 +8,10 @@ app.get('/check', (req, res) => {
     res.json({ message: "Hello from the router!" });
 });
 
+const cors = require('cors');
+
 //middleware
+app.use(cors());
 app.use(express.json()); //allows your application to read and parse JSON data sent in the request body.
 app.use((req, res, next) => {
     console.log(`${req.method} request for ${req.url}`);
