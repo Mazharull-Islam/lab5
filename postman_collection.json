@@ -1,0 +1,162 @@
+{
+    "info": {
+        "_postman_id": "85d5d929-11b2-40f6-8079-d2983d6bce12",
+        "name": "Game Management System",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Games",
+            "item": [
+                {
+                    "name": "Get All Games",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/games",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "games"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Game",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"New Adventure\",\n    \"genre\": \"RPG\",\n    \"rating\": 8,\n    \"multiplayer\": true\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3000/api/games"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Players",
+            "item": [
+                {
+                    "name": "Get All Players",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/players",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "players"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Player",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"age\": 22,\n    \"membershipLevel\": \"premium\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3000/api/players"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Developers",
+            "item": [
+                {
+                    "name": "Get All Developers",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/developers",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "developers"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Developer",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Nexus Devs\",\n    \"email\": \"contact@nexus.com\",\n    \"specializations\": [\"RPG\", \"Strategy\"],\n    \"experienceYears\": 5,\n    \"hourlyRate\": 60\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3000/api/developers"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Tournaments",
+            "item": [
+                {
+                    "name": "Get All Tournaments",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "http://localhost:3000/api/tournaments"
+                    }
+                },
+                {
+                    "name": "Register Tournament",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"playerId\": \"REPLACE_WITH_PLAYER_ID\",\n    \"developerId\": \"REPLACE_WITH_DEV_ID\",\n    \"gameId\": \"REPLACE_WITH_GAME_ID\",\n    \"tournamentDate\": \"2026-03-01T10:00:00Z\",\n    \"notes\": \"Excited for this!\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": "http://localhost:3000/api/tournaments/register"
+                    }
+                }
+            ]
+        }
+    ]
+}
